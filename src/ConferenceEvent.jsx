@@ -79,11 +79,11 @@ const ConferenceEvent = () => {
 
     const items = getItemsFromTotalCost();
 
-    const ItemsDisplay = ({ items }) => {
+    const ItemsDisplay = () => {
         console.log(items);
         return <>
             <div className="display_box1">
-                {item.length === 0 && <p>No items selected</p>}
+                {items.length === 0 && <p>No items selected</p>}
                 <table className = "table_item_data">
                     <thead>
                         <tr>
@@ -142,7 +142,7 @@ const ConferenceEvent = () => {
         venue: venueTotalCost,
         av: avTotalCost,
         meals: mealsTotalCost,
-    }
+    };
 
     const navigateToProducts = (idType) => {
         if (idType == '#venue' || idType == '#addons' || idType == '#meals') {
